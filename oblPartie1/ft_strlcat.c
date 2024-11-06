@@ -6,28 +6,22 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:51:15 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/10/25 16:51:15 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:38:50 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-size_t ft_strlen(const char *s)
-{
-    size_t i;
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
-}
 
-size_t strlcat(char *dst, const char *src, size_t dstsize)
+#include <stddef.h>
+
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
     size_t i;
     size_t size_dst;
     size_t size_src;
 
-    size_dst = ft_strlen(dst);
     size_src = ft_strlen(src);
     if (dstsize == 0)
         return (size_src);
+    size_dst = ft_strlen(dst);
     if (dstsize < size_dst)
         return (dstsize + size_src);
     else
@@ -41,4 +35,10 @@ size_t strlcat(char *dst, const char *src, size_t dstsize)
         dst[i + size_dst] = '\0';     
     }
     return (size_dst + size_src);
+}
+#include <string.h>
+int main()
+{
+    strlcat(NULL, NULL, 0);
+    return (0);
 }

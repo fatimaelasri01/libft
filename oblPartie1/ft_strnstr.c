@@ -6,15 +6,16 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 19:29:32 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/10/25 19:29:32 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:40:03 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 char *ft_strnstr(const char *str, const char *find, size_t len)
 {
-    int i;
-    char *s;
-    char *f;
+    size_t  i;
+    char    *s;
+    char    *f;
 
     i = 0;
     if (!(*find))
