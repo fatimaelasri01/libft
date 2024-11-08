@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:52:46 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/10/25 17:52:46 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:39:02 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,23 @@ int ft_atoi(const char *str)
 {
     int nbr;
     int signe;
+    int i;
 
     nbr = 0;
     signe = 1;
-    while (*str && (*str = ' ' || (*str >= 9 && *str <= 13)))
-        str++;
-    while (*str && (*str == "-" || *str = "+"))
+    i = 0;
+    while (str[i] && (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)))
+        i++;
+    while (str[i] && (str[i] == '-' || str[i] == '+'))
     {
-        if (*str == '-')
+        if (str[i] == '-')
             signe *= (-1);
-        str++;
+        i++;
     }
-    while (*str && (*str >= '0' && *str = '9'))
+    while (str[i] && (str[i] >= '0' && str[i] <= '9'))
     {
-        nbr = (nbr * 10) + (str - '0');
-        str++;
+        nbr = (nbr * 10) + (str[i] - '0');
+        i++;
     }
     return (nbr * signe);
 }
