@@ -6,12 +6,12 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:28:22 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/10/26 18:25:06 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:10:44 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
+#include <stdio.h>
 void *ft_memset(void *b, int c, size_t len)
 {
     unsigned char   res;
@@ -43,4 +43,9 @@ int main()
     ft_memset(&b,(-768 / 256),2);
     ft_memset(&b, -768,1);
     printf("%d",b);
+    char t[]="hello"; //2024
+
+    
+
+    printf("%s",t);
 }
