@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:25:42 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/09 15:13:04 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/16 19:18:55 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,21 +97,23 @@ char **ft_split(char const *s, char c)
 int main()
 {
     char const *s = "";
-    char c = 'a';
-    int i = 0;
-    char **res = ft_split(s, c);
-    
-    if (!res) {
-        printf("Erreur : La chaîne à splitter est NULL.\n");
-        return 1;
-    }
+    // char c = 'a';
+    // int i = 0;
+    // char **res = ft_split(s, c);
 
-    while (res[i]) {
-        printf("%s\n", res[i]);
-        free(res[i]);
-        i++;
-    }
-    free(res);
+    printf("%d", count(s, ' '));
+    
+    // if (!res) {
+    //     printf("Erreur : La chaîne à splitter est NULL.\n");
+    //     return 1;
+    // }
+
+    // while (res[i]) {
+    //     printf("%s\n", res[i]);
+    //     free(res[i]);
+    //     i++;
+    // }
+    // free(res);
 
     return 0;
 }
