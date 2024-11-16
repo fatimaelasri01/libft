@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:52:46 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/08 13:39:02 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/10 17:06:31 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,11 @@ int ft_atoi(const char *str)
         i++;
     }
     return (nbr * signe);
+}
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    printf("%d\n", ft_atoi("-218222222222222847483648"));
+    printf("%d\n", atoi("-218222222222222847483648"));
 }

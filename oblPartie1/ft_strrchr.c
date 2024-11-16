@@ -6,19 +6,13 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 19:02:58 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/10/25 19:02:58 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:18:17 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-size_t ft_strlen(const char *s)
-{
-    size_t i;
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
-}
 
-char *strrchr(const char *s, int c)
+#include "libft.h"
+
+char *ft_strrchr(const char *s, int c)
 {
     int len;
     char *p;
@@ -32,5 +26,5 @@ char *strrchr(const char *s, int c)
         return (p);
     }
     else
-        return (NULL)
+        return (NULL);
 }

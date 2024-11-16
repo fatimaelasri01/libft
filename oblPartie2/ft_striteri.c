@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:14:38 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/09 12:39:57 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/10 17:21:39 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 int main()
 {
-    char *s = NULL;
+    char *s = "sdfghjk";
     void (*p)(unsigned int, char *);
     
     p = cp;
-    ft_striteri(s, p);
+    ft_striteri(s, NULL);
     printf("%s", s);
 }

@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:25:42 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/08 13:44:13 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:13:04 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,17 +68,15 @@ char *copy(char const *str, char c, int *idx)
 char **ft_split(char const *s, char c)
 {
     char **arr = NULL;
-    int nb;
     int i;
     int idx;
 
     i = 0;
     if (!s)
         return (NULL);
-    nb = count(s, c);
     idx = 0;
-    arr = (char **)malloc((nb + 1) * sizeof(char *));
-    while (i < nb)
+    arr = (char **)malloc((count(s, c) + 1) * sizeof(char *));
+    while (i < count(s, c))
     {
         while(s[idx] == c)
             idx++;
@@ -87,8 +85,7 @@ char **ft_split(char const *s, char c)
         {
             while (i >= 0)
             {
-                free(arr[i]);
-                i--;
+                free(arr[i--]);
             }
         }
         i++;

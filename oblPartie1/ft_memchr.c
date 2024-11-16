@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:19:00 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/10/27 17:44:46 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/10 17:38:22 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void *ft_memchr(const void *s, int c, size_t n)
     t = (const unsigned char *)s;
     r = (unsigned char)c;
     i = 0;
+    if (n == 0)
+		return (NULL);
     while (t[i] != '\0' && t[i] != r && i < n)
         i++;
     if (t[i] == r)
@@ -32,6 +34,6 @@ void *ft_memchr(const void *s, int c, size_t n)
 int main()
 {
 char s[]= "hello world";
-printf("%s", ft_memchr(s, 'l',7));
-printf("%s", memchr(s, 'l', 7));
+printf("%s\n", ft_memchr(NULL, 'h',0));
+printf("%s", memchr(s, 'h', 3));
 }

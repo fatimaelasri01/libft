@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:51:26 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/10/27 18:59:20 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:53:39 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int main()
 {
-    char s1[] = "hello cv";
-    char s2[] = "hello cv";
+    char s1[] = "hello\0 cv";
+    char s2[] = "hello\200 cv";
     printf("%d \n", ft_memcmp(s1, s2, 12));
     printf("%d", memcmp(s1, s2, 12));
     return (0);
