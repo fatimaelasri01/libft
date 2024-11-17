@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:09:10 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/17 11:07:50 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/17 19:24:01 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,19 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		dest[i] = '\0';
 	}
 	return (len);
+}
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char *s = "hello";
+	char *d = "cc";
+	int i;
+	
+	i = ft_strlcpy(d, s, 3);
+	printf("%s\n", d);
+	
+	i = strlcpy(d, s, 3);
+	printf("%s\n", d);
 }

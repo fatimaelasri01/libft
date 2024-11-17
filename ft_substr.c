@@ -43,3 +43,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[j] = '\0';
 	return (res);
 }
+
+#include <stdio.h>
+int main()
+{
+	char *r1;
+	r1 = ft_substr(NULL, 0, 0);
+	printf("%s", r1);
+}

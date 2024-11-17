@@ -6,13 +6,13 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:25:42 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/17 10:44:52 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/17 20:28:10 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count(char const *str, char c)
+static int	count(char const *str, char c)
 {
 	int	nb;
 	int	i;
@@ -36,7 +36,7 @@ int	count(char const *str, char c)
 	return (nb);
 }
 
-char	*copy(char const *str, char c, int *idx)
+static char	*copy(char const *str, char c, int *idx)
 {
 	char	*res;
 	int		tmp;
@@ -65,7 +65,7 @@ char	*copy(char const *str, char c, int *idx)
 	return (res);
 }
 
-void	free_arr(char ***arr, int i)
+static void	free_arr(char ***arr, int i)
 {
 	while (i >= 0)
 		free((*arr)[i--]);

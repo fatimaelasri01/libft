@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:58:29 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/17 09:45:09 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/17 16:51:01 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,20 @@ void	ft_bzero(void *s, size_t n)
 			i++;
 		}
 	}
+}
+
+#include "string.h"
+#include "stdio.h"
+
+int main()
+{
+	int t[] = {1, 23, 4};
+	
+	ft_bzero(t, 12);
+
+	printf("%d\n", t[0]);	
+	printf("%d\n", t[1]);
+	printf("%d\n", t[2]);
+	
+	return (0);
 }

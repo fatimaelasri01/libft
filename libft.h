@@ -6,15 +6,13 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:23 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/17 10:59:24 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/17 13:40:36 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

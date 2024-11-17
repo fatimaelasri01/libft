@@ -6,7 +6,7 @@
 /*   By: fel-asri <fel-asri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 19:29:32 by fel-asri          #+#    #+#             */
-/*   Updated: 2024/11/17 13:24:36 by fel-asri         ###   ########.fr       */
+/*   Updated: 2024/11/17 19:01:42 by fel-asri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,14 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 		i++;
 	}
 	return (NULL);
+}
+
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+	char *big = "hello cvvv";
+	char *lil = "cv";
+	printf("%s\n", ft_strnstr(big, lil, 4));
+	printf("%s\n", strnstr(big, lil, 4));
 }
